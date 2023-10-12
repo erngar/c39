@@ -22,8 +22,9 @@ const rappers  = {
 
 'unknown': {
     'age': 0,
-    'birthName': 'unknown',
+    'birthName': 'rapper not in dataset',
     'birthLocation': 'unknown'
+
 }
 
 }
