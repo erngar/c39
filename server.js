@@ -20,6 +20,12 @@ const rappers  = {
     'birthLocation': 'Chicago, Illinois'
 },
 
+'cap G': {
+    'age':40,
+    'birthName': 'CAP',
+    'birthLocation': 'Atlanta, Georgia'
+},
+
 'unknown': {
     'age': 0,
     'birthName': 'rapper not in dataset',
@@ -37,6 +43,7 @@ app.get('/', (request, response) =>{
 
 //another route
 app.get('/api/:name', (request,response) =>{
+    console.log(request.params.name);
     const rapperName = request.params.name.toLocaleLowerCase()
     if(rappers[rapperName]){
         response.json(rappers[rapperName])
