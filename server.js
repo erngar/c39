@@ -42,7 +42,7 @@ app.get('/', (request, response) =>{
 })
 
 //another route
-app.get('/api/:name', (request,response) =>{
+app.get('/api/', (request,response) =>{
     console.log(request.params.name);
     const rapperName = request.params.name.toLocaleLowerCase()
     if(rappers[rapperName]){
