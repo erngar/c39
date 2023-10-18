@@ -45,11 +45,11 @@ app.get('/', (request, response) =>{
 app.get('/api/:name', (request,response) =>{
     console.log(request.params.name);
     const rapperName = request.params.name.toLocaleLowerCase()
-    
+
     if(rappers[rapperName]){
         response.json(rappers[rapperName])
     }else{
-        response.json(rappers['unknown'])
+        response.json(rappers['cap g'])
     }  
    
 })
