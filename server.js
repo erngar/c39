@@ -44,12 +44,12 @@ app.get('/', (request, response) =>{
 //another route
 app.get('/api/:name', (request,response) =>{
     console.log(request.params.name);
-    const rapperName = request.params.name.toLocaleLowerCase()
+    const rapperName = request.params.name.toLowerCase()
 
     if(rappers[rapperName]){
         response.json(rappers[rapperName])
     }else{
-        response.json(rappers['cap g'])
+        response.json(rappers['unknown'])
     }  
    
 })
